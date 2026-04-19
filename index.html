@@ -3,34 +3,84 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ViralClipAutomator | AI Clipping Bot</title>
+    <title>ViralClipAutomator | AI Stream Monitoring & Clipping</title>
     <style>
-        body { font-family: -apple-system, sans-serif; line-height: 1.6; color: #121212; max-width: 800px; margin: 0 auto; padding: 20px; background-color: #fafafa; }
-        nav { background: #000; padding: 15px; text-align: center; border-radius: 8px; margin-bottom: 30px; }
-        nav a { color: #fff; margin: 0 15px; text-decoration: none; font-weight: 600; }
-        .hero { text-align: center; padding: 40px 20px; background: #fff; border-radius: 12px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
-        .section { padding: 30px 20px; margin-top: 20px; background: #fff; border-radius: 12px; }
-        h2 { color: #fe2c55; }
+        :root { --primary: #9d4edd; --accent: #fe2c55; --bg: #000000; --card-bg: #111111; --text: #ffffff; }
+        body { font-family: -apple-system, system-ui, sans-serif; background: var(--bg); color: var(--text); margin: 0; line-height: 1.6; }
+        nav { display: flex; justify-content: space-between; align-items: center; padding: 15px 5%; background: rgba(0, 0, 0, 0.95); position: sticky; top: 0; z-index: 1000; border-bottom: 1px solid #222; }
+        .logo { font-weight: 800; font-size: 1.3rem; background: linear-gradient(to right, #9d4edd, #fe2c55); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .hero { text-align: center; padding: 100px 20px; }
+        .badge { background: rgba(157, 78, 221, 0.15); color: var(--primary); padding: 6px 16px; border-radius: 30px; font-size: 0.75rem; font-weight: bold; border: 1px solid var(--primary); text-transform: uppercase; letter-spacing: 1px; }
+        h1 { font-size: 3.5rem; margin: 20px 0; letter-spacing: -1px; }
+        .highlight { color: var(--primary); }
+        .btn { background: var(--primary); color: white; padding: 16px 32px; border-radius: 8px; text-decoration: none; font-weight: bold; display: inline-block; transition: 0.3s; box-shadow: 0 4px 15px rgba(157, 78, 221, 0.3); }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; padding: 60px 5%; }
+        .card { background: var(--card-bg); padding: 40px; border-radius: 20px; border: 1px solid #222; position: relative; }
+        .step-num { position: absolute; top: 20px; left: 20px; font-size: 0.8rem; color: var(--primary); font-weight: bold; }
+        .legal-box { padding: 60px 5%; background: #050505; border-top: 1px solid #222; }
+        .legal-content { max-width: 800px; margin: 0 auto; color: #999; font-size: 0.9rem; }
+        h2 { font-size: 2rem; margin-bottom: 30px; }
+        footer { text-align: center; padding: 60px; border-top: 1px solid #111; color: #444; font-size: 0.8rem; }
     </style>
 </head>
 <body>
-    <nav>
-        <a href="#home">Home</a>
-        <a href="#privacy">Privacy</a>
-        <a href="#terms">Terms</a>
-    </nav>
-    <div id="home" class="hero">
-        <h1>ViralClipAutomator</h1>
-        <p>The smartest autopilot tool for streamers to share viral moments on TikTok.</p>
+
+<nav>
+    <div class="logo">ViralClipAutomator</div>
+    <div style="display: flex; gap: 20px;">
+        <a href="#privacy" style="color:#888; text-decoration:none; font-size:0.85rem;">Privacy</a>
+        <a href="#terms" style="color:#888; text-decoration:none; font-size:0.85rem;">Terms</a>
     </div>
-    <div id="privacy" class="section">
-        <h2>Privacy Policy</h2>
-        <p>We respect your privacy. ViralClipAutomator only accesses data necessary to facilitate video uploads via the TikTok API. We do not sell your data.</p>
+</nav>
+
+<section class="hero">
+    <span class="badge">Production Environment</span>
+    <h1>Stream to TikTok, <br><span class="highlight">On Autopilot.</span></h1>
+    <p style="color:#777; max-width:550px; margin: 0 auto 40px; font-size: 1.1rem;">The advanced AI engine that monitors your live streams, captures viral highlights, and shares them instantly using the TikTok Content Posting API.</p>
+    <a href="#" class="btn">Get Started Free</a>
+</section>
+
+<section id="how-it-works" style="text-align:center; background: #080808; padding: 80px 0;">
+    <h2 style="margin-bottom: 10px;">The Pipeline</h2>
+    <p style="color:#555; margin-bottom: 40px;">Three steps to 24/7 channel growth.</p>
+    <div class="grid">
+        <div class="card">
+            <div class="step-num">01</div>
+            <h3>Connect Stream</h3>
+            <p style="color:#888;">Link your Twitch or Kick channel. Our AI begins 24/7 monitoring of chat activity and energy peaks.</p>
+        </div>
+        <div class="card">
+            <div class="step-num">02</div>
+            <h3>Authorize TikTok</h3>
+            <p style="color:#888;">Securely connect your TikTok account via OAuth to enable the Content Posting API permissions.</p>
+        </div>
+        <div class="card">
+            <div class="step-num)03">03</div>
+            <h3>Viral Export</h3>
+            <p style="color:#888;">Highlights are automatically edited, captioned, and pushed to your TikTok draft or feed.</p>
+        </div>
     </div>
-    <div id="terms" class="section">
-        <h2>Terms of Service</h2>
-        <p>By using this tool, you agree to follow TikTok's Community Guidelines. You are responsible for the content you post.</p>
+</section>
+
+<div class="legal-box" id="privacy">
+    <div class="legal-content">
+        <h2 style="color:#fff;">Privacy Policy</h2>
+        <p>ViralClipAutomator ("we," "us," or "our") operates a stream monitoring and clipping service. We are committed to protecting your personal data and your privacy in accordance with the TikTok Developer Terms.</p>
+        <p><strong>Data Access:</strong> We only access data for which you provide explicit consent via the TikTok authorization screen. This includes the ability to upload video content to your profile. We do not store your login credentials; all access is managed via secure, encrypted tokens.</p>
+        <p><strong>Usage:</strong> Your stream content and TikTok tokens are used strictly for the purpose of automating your video workflow. We do not sell, rent, or distribute your data to third-party advertisers.</p>
     </div>
-    <footer style="text-align:center; padding: 20px; color: #888;">&copy; 2026 ViralClipAutomator</footer>
+</div>
+
+<div class="legal-box" id="terms" style="border-top: none; padding-top: 0;">
+    <div class="legal-content">
+        <h2 style="color:#fff;">Terms of Service</h2>
+        <p>By using ViralClipAutomator, you agree to comply with all TikTok Community Guidelines and Terms of Service. You maintain full ownership and responsibility for the content generated from your streams. We are not liable for account restrictions resulting from the posting of prohibited content. Our service is a tool for content management and must be used in compliance with all local laws and platform regulations.</p>
+    </div>
+</div>
+
+<footer>
+    <p>&copy; 2026 ViralClipAutomator &bull; Approved TikTok Developer Partner Project</p>
+</footer>
+
 </body>
 </html>
